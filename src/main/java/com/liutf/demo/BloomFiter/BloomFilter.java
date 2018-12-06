@@ -1,12 +1,12 @@
 package com.liutf.demo.BloomFiter;
 
 import com.google.common.collect.Sets;
-import com.google.gson.JsonElement;
 import orestes.bloomfilter.FilterBuilder;
 import orestes.bloomfilter.HashProvider.HashMethod;
-import orestes.bloomfilter.json.BloomFilterConverter;
 import orestes.bloomfilter.redis.BloomFilterRedis;
 import orestes.bloomfilter.redis.helper.RedisSentinelPoolBuilder;
+
+//import com.google.gson.JsonElement;
 
 public class BloomFilter {
     public static void main(String[] args) {
@@ -25,8 +25,8 @@ public class BloomFilter {
                         )
                         .overwriteIfExists(true) //存在则覆盖
                         .redisConnections(100).complete());
-        JsonElement json = BloomFilterConverter.toJson(bloomFilterRedis);
-        System.out.println(json);
+        //JsonElement json = BloomFilterConverter.toJson(bloomFilterRedis);
+        //System.out.println(json);
 //		System.out.println(bloomFilterRedis.add("haaehe"));
 //		System.out.println(bloomFilterRedis.contains("hehe"));
         for (int i = 40; i < 60; i++) {

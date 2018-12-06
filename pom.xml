@@ -32,16 +32,6 @@
 
     <repositories>
         <repository>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <id>apache-maven-snapshots</id>
-            <url>http://people.apache.org/repo/m2-snapshot-repository</url>
-        </repository>
-        <repository>
             <id>java.net</id>
             <url>http://download.java.net/maven/1</url>
             <layout>legacy</layout>
@@ -105,7 +95,6 @@
             <artifactId>bloom-filter</artifactId>
             <version>2.0.0</version>
         </dependency>
-
 
         <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
         <dependency>
